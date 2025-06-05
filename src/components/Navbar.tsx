@@ -41,10 +41,12 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-pi-navy rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">PI</span>
-            </div>
+          <div className="flex items-center space-x-3">
+            <img 
+              src="/lovable-uploads/bf792c62-9ff2-413c-ad58-c89d5ed99221.png" 
+              alt="PI Consults Logo" 
+              className="h-10 w-auto"
+            />
             <div>
               <h1 className="font-bold text-pi-navy text-lg">PI Consults</h1>
               <p className="text-xs text-pi-earth">Pvt. Ltd.</p>
@@ -57,7 +59,7 @@ const Navbar = () => {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-pi-navy hover:text-pi-blue transition-colors duration-300 font-medium"
+                className="text-pi-navy hover:text-yellow-500 transition-colors duration-300 font-medium"
               >
                 {item.name}
               </button>
@@ -83,7 +85,7 @@ const Navbar = () => {
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className="block w-full text-left px-4 py-2 text-pi-navy hover:text-pi-blue hover:bg-pi-gray transition-colors duration-300 font-medium"
+                  className="block w-full text-left px-4 py-2 text-pi-navy hover:text-yellow-500 hover:bg-pi-gray transition-colors duration-300 font-medium"
                 >
                   {item.name}
                 </button>
