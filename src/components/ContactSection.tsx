@@ -36,8 +36,8 @@ const ContactSection = () => {
     {
       icon: MapPin,
       title: 'Address',
-      details: ['Khumaltar, Lalitpur', 'Nepal - 44700'],
-      link: 'https://maps.google.com/?q=Khumaltar,Lalitpur,Nepal'
+      details: ['New Baneshwor, Kathmandu', 'Nepal - 44600'],
+      link: 'https://maps.google.com/?q=New+Baneshwor,Kathmandu,Nepal'
     },
     {
       icon: Phone,
@@ -224,19 +224,19 @@ const ContactSection = () => {
           </div>
         </div>
 
-        {/* Google Map */}
+        {/* Google Map - New Baneshwor, Kathmandu */}
         <div className="mt-16">
-          <h3 className="text-2xl font-bold text-pi-navy text-center mb-8">Find Us</h3>
+          <h3 className="text-2xl font-bold text-pi-navy text-center mb-8">Find Us at New Baneshwor</h3>
           <div className="rounded-lg overflow-hidden shadow-lg h-96">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.2838901887436!2d85.3239543!3d27.6915226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19f0e0146297%3A0x1a8042b85d3f5b45!2sKhumaltar%2C%20Lalitpur%2044700!5e0!3m2!1sen!2snp!4v1640995200000!5m2!1sen!2snp"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.4859725!2d85.3240893!3d27.7025435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19c5b2f5c7a9%3A0x1b97f1a65b5c8e8f!2sNew%20Baneshwor%2C%20Kathmandu%2044600!5e0!3m2!1sen!2snp!4v1640995200000!5m2!1sen!2snp"
               width="100%"
               height="100%"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="PI Consults Location"
+              title="PI Consults Location - New Baneshwor, Kathmandu"
             ></iframe>
           </div>
         </div>

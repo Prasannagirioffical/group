@@ -24,7 +24,7 @@ const ProjectsSection = () => {
       category: 'Master Plans',
       date: '2023',
       location: 'Kathmandu Valley, Nepal',
-      image: 'https://images.unsplash.com/photo-1501854140801-50d01698950b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+      image: 'https://images.unsplash.com/photo-1518005020951-eccb494ad742?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
       description: 'Comprehensive urban development plan for sustainable growth of Kathmandu Valley.'
     },
     {
@@ -32,7 +32,7 @@ const ProjectsSection = () => {
       category: 'Stadiums',
       date: '2022',
       location: 'Pokhara, Nepal',
-      image: 'https://images.unsplash.com/photo-1433086966358-54859d0ed716?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+      image: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
       description: 'Modern multi-purpose stadium with capacity for 25,000 spectators.'
     },
     {
@@ -40,7 +40,7 @@ const ProjectsSection = () => {
       category: 'Agro Infrastructure',
       date: '2023',
       location: 'Chitwan, Nepal',
-      image: 'https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+      image: 'https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
       description: 'State-of-the-art agricultural processing and storage facility.'
     },
     {
@@ -48,7 +48,7 @@ const ProjectsSection = () => {
       category: 'Interior Design',
       date: '2023',
       location: 'Bhaktapur, Nepal',
-      image: 'https://images.unsplash.com/photo-1460574283810-2aab119d8511?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+      image: 'https://images.unsplash.com/photo-1496307653780-42ee777d4833?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
       description: 'Contemporary interior design blending traditional Newari architecture with modern luxury.'
     },
     {
@@ -56,7 +56,7 @@ const ProjectsSection = () => {
       category: 'Hospitals',
       date: '2022',
       location: 'Lalitpur, Nepal',
-      image: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+      image: 'https://images.unsplash.com/photo-1431576901776-e539bd916ba2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
       description: 'Specialized pediatric healthcare facility with patient-centered design.'
     },
     {
@@ -64,7 +64,7 @@ const ProjectsSection = () => {
       category: 'Academic Buildings',
       date: '2023',
       location: 'Biratnagar, Nepal',
-      image: 'https://images.unsplash.com/photo-1501854140801-50d01698950b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+      image: 'https://images.unsplash.com/photo-1459767129954-1b1c1f9b9ace?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
       description: 'Modern educational campus with sustainable design principles.'
     },
     {
@@ -72,7 +72,7 @@ const ProjectsSection = () => {
       category: 'Residential',
       date: '2022',
       location: 'Dhulikhel, Nepal',
-      image: 'https://images.unsplash.com/photo-1433086966358-54859d0ed716?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+      image: 'https://images.unsplash.com/photo-1460574283810-2aab119d8511?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
       description: 'Sustainable residential development with green building technologies.'
     },
     {
@@ -80,7 +80,7 @@ const ProjectsSection = () => {
       category: 'Interior Design',
       date: '2023',
       location: 'Kathmandu, Nepal',
-      image: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+      image: 'https://images.unsplash.com/photo-1518005020951-eccb494ad742?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
       description: 'Modern office spaces designed for productivity and employee well-being.'
     },
     {
@@ -88,7 +88,7 @@ const ProjectsSection = () => {
       category: 'Hospitals',
       date: '2023',
       location: 'Butwal, Nepal',
-      image: 'https://images.unsplash.com/photo-1460574283810-2aab119d8511?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+      image: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
       description: 'Hospital expansion project with advanced medical facilities and patient care areas.'
     }
   ];
