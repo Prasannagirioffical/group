@@ -42,14 +42,16 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <img 
-              src="/lovable-uploads/bf792c62-9ff2-413c-ad58-c89d5ed99221.png" 
-              alt="PI Consults Logo" 
-              className="h-10 w-auto"
-            />
+            <div className="bg-yellow-500 p-2 rounded-lg">
+              <img 
+                src="/lovable-uploads/bf792c62-9ff2-413c-ad58-c89d5ed99221.png" 
+                alt="PI Consults Logo" 
+                className="h-8 w-auto"
+              />
+            </div>
             <div>
-              <h1 className="font-bold text-pi-navy text-lg">PI Consults</h1>
-              <p className="text-xs text-pi-earth">Pvt. Ltd.</p>
+              <h1 className="font-bold text-pi-navy text-lg hover:text-yellow-500 transition-colors duration-300">PI Consults</h1>
+              <p className="text-xs text-pi-earth hover:text-yellow-600 transition-colors duration-300">Pvt. Ltd.</p>
             </div>
           </div>
 
