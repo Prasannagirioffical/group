@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -18,7 +19,18 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				poppins: ['Poppins', 'sans-serif'],
+			},
 			colors: {
+				// Custom PI Consults color palette
+				'pi-navy': '#0F4C75',
+				'pi-blue': '#3282B8',
+				'pi-light-blue': '#BBE1FA',
+				'pi-earth': '#8B7355',
+				'pi-light-earth': '#D4C4A8',
+				'pi-gray': '#F8F9FA',
+				
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
@@ -84,11 +96,33 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(20px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'slide-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateX(-20px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateX(0)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.6s ease-out',
+				'slide-in': 'slide-in 0.6s ease-out'
 			}
 		}
 	},
