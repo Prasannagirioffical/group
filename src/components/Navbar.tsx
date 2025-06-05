@@ -41,8 +41,8 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
-            <div className="bg-yellow-500 p-2 rounded-lg">
+          <div className="flex items-center space-x-3 group cursor-pointer">
+            <div className="bg-yellow-500 p-2 rounded-lg group-hover:bg-yellow-400 transition-colors duration-300">
               <img 
                 src="/lovable-uploads/bf792c62-9ff2-413c-ad58-c89d5ed99221.png" 
                 alt="PI Consults Logo" 
@@ -50,8 +50,8 @@ const Navbar = () => {
               />
             </div>
             <div>
-              <h1 className="font-bold text-pi-navy text-lg hover:text-yellow-500 transition-colors duration-300">PI Consults</h1>
-              <p className="text-xs text-pi-earth hover:text-yellow-600 transition-colors duration-300">Pvt. Ltd.</p>
+              <h1 className="font-bold text-pi-navy text-lg group-hover:text-yellow-500 transition-colors duration-300">PI Consults</h1>
+              <p className="text-xs text-pi-earth group-hover:text-yellow-600 transition-colors duration-300">Pvt. Ltd.</p>
             </div>
           </div>
 
@@ -61,9 +61,16 @@ const Navbar = () => {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-pi-navy hover:text-yellow-500 transition-colors duration-300 font-medium"
+                className={`font-medium transition-all duration-300 px-3 py-2 rounded-lg relative ${
+                  item.name === 'Home' 
+                    ? 'text-pi-navy hover:text-white hover:bg-yellow-500 hover:shadow-lg transform hover:scale-105' 
+                    : 'text-pi-navy hover:text-yellow-500'
+                }`}
               >
                 {item.name}
+                {item.name === 'Home' && (
+                  <span className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-yellow-600 opacity-0 hover:opacity-20 rounded-lg transition-opacity duration-300"></span>
+                )}
               </button>
             ))}
           </div>
@@ -72,22 +79,26 @@ const Navbar = () => {
           <Button
             variant="ghost"
             size="icon"
-            className="lg:hidden"
+            className="lg:hidden hover:bg-yellow-100"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            {isMobileMenuOpen ? <X /> : <Menu />}
+            {isMobileMenuOpen ? <X className="text-pi-navy" /> : <Menu className="text-pi-navy" />}
           </Button>
         </div>
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden mt-4 pb-4 border-t border-gray-200">
+          <div className="lg:hidden mt-4 pb-4 border-t border-gray-200 bg-white/95 backdrop-blur-md rounded-lg shadow-lg">
             <div className="pt-4 space-y-2">
               {navItems.map((item) => (
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className="block w-full text-left px-4 py-2 text-pi-navy hover:text-yellow-500 hover:bg-pi-gray transition-colors duration-300 font-medium"
+                  className={`block w-full text-left px-4 py-3 font-medium transition-all duration-300 rounded-lg mx-2 ${
+                    item.name === 'Home'
+                      ? 'text-pi-navy hover:text-white hover:bg-yellow-500 hover:shadow-md transform hover:scale-[1.02]'
+                      : 'text-pi-navy hover:text-yellow-500 hover:bg-yellow-50'
+                  }`}
                 >
                   {item.name}
                 </button>

@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -16,20 +15,56 @@ const ContactSection = () => {
     subject: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate form submission
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for contacting us. We'll get back to you within 24 hours.",
-    });
-    setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
+    setIsSubmitting(true);
+
+    try {
+      // Create email content
+      const emailBody = `
+New Contact Form Submission from PI Consults Website:
+
+Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone}
+Subject: ${formData.subject}
+
+Message:
+${formData.message}
+
+---
+This message was sent from the PI Consults contact form.
+      `;
+
+      // Create mailto link with the form data
+      const mailtoLink = `mailto:prasannagiri12p@gmail.com?subject=Contact Form: ${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(emailBody)}`;
+      
+      // Open email client
+      window.location.href = mailtoLink;
+
+      toast({
+        title: "Email Client Opened!",
+        description: "Your email client has been opened with the message pre-filled. Please send the email to complete your inquiry.",
+      });
+
+      // Reset form
+      setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "There was an issue opening your email client. Please try again or contact us directly at prasannagiri12p@gmail.com",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
@@ -48,8 +83,8 @@ const ContactSection = () => {
     {
       icon: Mail,
       title: 'Email',
-      details: ['info@piconsults.com.np', 'projects@piconsults.com.np'],
-      link: 'mailto:info@piconsults.com.np'
+      details: ['prasannagiri12p@gmail.com', 'projects@piconsults.com.np'],
+      link: 'mailto:prasannagiri12p@gmail.com'
     },
     {
       icon: Clock,
@@ -211,12 +246,20 @@ const ContactSection = () => {
                     />
                   </div>
 
+                  <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                    <p className="text-sm text-gray-700">
+                      <strong>Note:</strong> This form will open your email client with a pre-filled message to <strong>prasannagiri12p@gmail.com</strong>. 
+                      Please send the email to complete your inquiry.
+                    </p>
+                  </div>
+
                   <Button 
                     type="submit" 
                     size="lg"
-                    className="w-full bg-pi-navy hover:bg-pi-blue text-white font-semibold py-3"
+                    disabled={isSubmitting}
+                    className="w-full bg-pi-navy hover:bg-pi-blue text-white font-semibold py-3 transition-all duration-300"
                   >
-                    Send Message
+                    {isSubmitting ? 'Opening Email...' : 'Send Message'}
                   </Button>
                 </form>
               </CardContent>
